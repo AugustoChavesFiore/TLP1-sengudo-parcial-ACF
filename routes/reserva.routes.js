@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.get('/reserva/editar/:id', (req, res) => {
+router.get('/editar/:id', (req, res) => {
 
     const reservaId = req.params.id;
     res.render('reserva/editar_reserva', { id: reservaId });
@@ -37,16 +37,16 @@ router.get('/reserva/crear', (req, res) => {
 // ==========================================
 
 // Obtener todas las reservas
-router.get('/api/',obtenerReservas);
+router.get('/api/reserva',obtenerReservas);
  
 // Crear una reserva
-router.post('/api/',crearReserva);
+router.post('/api/reserva',crearReserva);
  
 // Actualizar una reserva
-router.put('/api/:id',actualizarReserva);
+router.put('/api/reserva/:id',actualizarReserva);
  
 // Eliminar una reserva de forma lógica
-router.delete('/api/:id',eliminarReserva);
+router.delete('/api/reserva/:id',eliminarReserva);
 
  
  module.exports = router;
