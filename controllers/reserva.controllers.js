@@ -117,7 +117,7 @@ ctrlReservas.actualizarReserva = async (req, res) => {
     }
 }
 
-ctrlReserva.eliminarReserva= async (req, res) => {
+ctrlReservas.eliminarReserva= async (req, res) => {
     const { idReserva } = req.params;
 
     try {
@@ -137,7 +137,7 @@ ctrlReserva.eliminarReserva= async (req, res) => {
             })
         }
 
-        return res.json({tareaEliminada, message: 'reserva eliminada correctamente' });
+        return res.json({reservaEliminada, message: 'reserva eliminada correctamente' });
     } catch (error) {
         return res.status(error.status || 500).json(error.message || 'Error interno del servidor');
     }

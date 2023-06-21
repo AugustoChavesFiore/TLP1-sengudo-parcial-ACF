@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 // Routes
-app.use('/', require('./routes/reserva.routes'));
+app.use('/', require('./routes/reserva.routes.js'));
 
 // TODO: Si la petición no coincide con ninguna de las rutas declaradas, mostrar error 404
 app.use((req, res, next) => {
